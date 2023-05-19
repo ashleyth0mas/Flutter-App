@@ -99,7 +99,7 @@ class _CartPageState extends State<CartPage> {
                                                   Popularproductcontroller>()
                                               .Product_list
                                               .indexOf(_cartlist[index]
-                                                  .product!); //to get the popular product index from popularproduct list(Product_list),we use indexOf(product object)
+                                                  .product!); 
                                           if (popularindex >= 0) {
                                             Get.toNamed(
                                                 Routehelper.getpopularfood(
