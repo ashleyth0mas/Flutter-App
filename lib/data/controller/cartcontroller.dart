@@ -15,7 +15,7 @@ class Cartcontroller extends GetxController {
     var totquantity = 0;
     if (items.containsKey(product.id)) {
       items.update(product.id!, (value) {
-        //product= value,product.id=key
+     
         totquantity = value.quantity! + quantity;
         return Cartmodel(
             id: product.id,
@@ -98,10 +98,9 @@ class Cartcontroller extends GetxController {
 
   int totalamt() {
     int total = 0;
-    getItems.forEach(( value) {                             //can either loop through getItems or items
+    getItems.forEach(( value) {                          s
       total += value.price! * value.quantity!;
     });
     return total;
   }
 }
-//mapname.entries.map((e{}))=to return each key value pair 
