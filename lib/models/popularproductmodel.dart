@@ -3,7 +3,7 @@ class Product {
   int? _typeId;
   int? _offset;
   late List<Productsmodel> _products;
-  List<Productsmodel> get productslist =>_products; //products =list object to refer/access to the _products list (note the syntax,here we use get to pass the list to object product) this object is used to pass to the controller
+  List<Productsmodel> get productslist =>_products; 
 
 
   Product(
@@ -15,7 +15,7 @@ class Product {
     this._typeId = typeId;
     this._offset = offset;
     this._products = products;
-    //rhs variables are constructor variables
+    
   }
 
   Product.fromJson(Map<String, dynamic> json) {
@@ -25,7 +25,7 @@ class Product {
     if (json['products'] != null) {
       _products = <Productsmodel>[];
       json['products'].forEach((v) {
-        _products.add(Productsmodel.fromJson(v));  //assigning values to list _products
+        _products.add(Productsmodel.fromJson(v));  
       });
     }
   }
@@ -55,7 +55,7 @@ class Productsmodel {
       this.updatedAt,
       this.typeId});
 
-  Productsmodel.fromJson(Map<String, dynamic> json) { //each product object 
+  Productsmodel.fromJson(Map<String, dynamic> json) { 
     id = json['id'];
     name = json['name'];
     description = json['description'];
