@@ -22,7 +22,7 @@ class Foodpg extends StatefulWidget {
 }
 
 class _FoodpgState extends State<Foodpg> {
-  //PageController pgcontrol;                                       //object of PageController
+  //PageController pgcontrol;                                     
   PageController pgcontrol = PageController(viewportFraction: 0.85);
   var currpagevalue = 0.0;
   double scaleFactor = 0.8;
@@ -33,7 +33,7 @@ class _FoodpgState extends State<Foodpg> {
     pgcontrol.addListener(() {
       setState(() {
         currpagevalue = pgcontrol.page!;
-        //pgcontrol.page- returns current page value of the slide
+       
       });
     });
   }
@@ -49,7 +49,7 @@ class _FoodpgState extends State<Foodpg> {
     return Column(
       children: [
         GetBuilder<Popularproductcontroller>(builder: (pop_products) {
-          //pop_product=object referring to instances of controller
+          
           return pop_products.isLoaded
               ? Container(
                   color: Colors.white,
@@ -62,12 +62,11 @@ class _FoodpgState extends State<Foodpg> {
                         return _buildPageItem(
                             position,
                             pop_products.Product_list[
-                                position]); //pop_products.Product_list[position]=each list object
-                        //position=index
+                                position]); 
                       }),
                 )
               : CircularProgressIndicator(
-                  //for loading
+                  
                   color: Appcolors.maincolor,
                 );
         }),
@@ -258,7 +257,7 @@ class _FoodpgState extends State<Foodpg> {
                     BoxShadow(color: Colors.white, offset: Offset(5, 0))
                   ]),
               child: Container(
-                //Container for providing padding
+              
                 padding: EdgeInsets.only(
                     top: Dimensions.padtop15, left: 15, right: 15),
                 child: Column(
