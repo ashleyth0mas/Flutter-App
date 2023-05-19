@@ -10,7 +10,7 @@ class apiclient extends GetConnect implements GetxService {
     timeout = const Duration(seconds: 30);
     token = Appconstants.TOKEN;
     headers = {
-      //header required for server communication along with apiurl
+
       'Content-type': 'application/json; charset=UTF-8',
       'Authorization': 'Bearer $token',
     };
@@ -18,7 +18,7 @@ class apiclient extends GetConnect implements GetxService {
 
   Future<Response> getdata( String url,
   ) async {
-                                             //getdata()-here is a user defined method
+                                            
    
     try {
       Response response = await get(url);
