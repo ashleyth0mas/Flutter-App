@@ -76,7 +76,7 @@ class _CartPageState extends State<CartPage> {
                     margin: EdgeInsets.only(top: Dimensions.height20),
                     color: Colors.white,
                     child: MediaQuery.removePadding(
-                      //mediaquery.remove padding=to remove default padding of listview builder
+                      
                       context: context,
                       removeTop: true,
                       child:
@@ -109,7 +109,7 @@ class _CartPageState extends State<CartPage> {
                                                     Recommendedproductcontroller>()
                                                 .Recommendedproduct_list
                                                 .indexOf(_cartlist[index]
-                                                    .product!); //to get the recommended product index from recommendedproduct list(Product_list),we use indexOf(product object)
+                                                    .product!); 
                                             if (recommendedindex >= 0) {
                                               Get.toNamed(Routehelper
                                                   .getrecommendedfood(
