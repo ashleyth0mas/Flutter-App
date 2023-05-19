@@ -101,7 +101,7 @@ class food_info extends StatelessWidget {
               backgroundColor: Color.fromARGB(255, 85, 161, 148),
               expandedHeight: 300,
               flexibleSpace: FlexibleSpaceBar(
-                //content inside flexiblespace
+              
                 background: Image.network(
                   Appconstants.BASEURL + Appconstants.UPLOADS + product.img!,
                   fit: BoxFit.cover,
