@@ -20,7 +20,7 @@ class Popularproductcontroller extends GetxController {
   int _incartitems = 0;
 
   int _quantity = 0;
-  //get incartitems is used to make it access to other classes and this variable gets previous cart quantity& quantity added after.
+ 
   int get incartitems => _incartitems + _quantity;
   int get quantity => _quantity;
   bool get isLoaded =>
@@ -82,7 +82,7 @@ class Popularproductcontroller extends GetxController {
     _cart = cart;
     var exist = false;
     exist = _cart.existIncart(product);
-    // if exist
+  
     print("exist or not=" + exist.toString());
     if (exist) {
       _incartitems = _cart.getQuantity(product);
@@ -113,4 +113,4 @@ class Popularproductcontroller extends GetxController {
   }
 }
 
-//data is passed to controller as in the form of model object (line 18)
+
