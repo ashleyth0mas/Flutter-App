@@ -23,7 +23,7 @@ class popularfood_details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var product = Get.find<Popularproductcontroller>()
-        .Product_list[pageid]; //to get each list object
+        .Product_list[pageid];
     Get.find<Popularproductcontroller>()
         .initialState(product, Get.find<Cartcontroller>());
     return Scaffold(
