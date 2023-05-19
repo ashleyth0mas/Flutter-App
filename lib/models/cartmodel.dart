@@ -6,7 +6,7 @@ class Cart {
   int? _offset;
   late List<Cartmodel> _products;
   List<Cartmodel> get productslist =>
-      _products; //products =list object to refer/access to the _products list (note the syntax,here we use get to pass the list to object product) this object is used to pass to the controller
+      _products; 
 
   Cart(
       {required totalSize,
@@ -17,7 +17,7 @@ class Cart {
     this._typeId = typeId;
     this._offset = offset;
     this._products = products;
-    //rhs variables are constructor variables
+   
   }
 
   Cart.fromJson(Map<String, dynamic> json) {
@@ -28,7 +28,7 @@ class Cart {
       _products = <Cartmodel>[];
       json['products'].forEach((v) {
         _products
-            .add(Cartmodel.fromJson(v)); //assigning values to list _products
+            .add(Cartmodel.fromJson(v));
       });
     }
   }
