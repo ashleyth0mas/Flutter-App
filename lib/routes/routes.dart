@@ -9,14 +9,13 @@ class Routehelper {
   static const String popularfood = "/popular-food";
   static const String recommendedfood = "/recommended-food";
   static const String cartpage = "/cartpage";
-  //passing as function to pass arguements if needed
+
   static String getinitial() => '$initial';
   static String getpopularfood(int pageId,String page) => '$popularfood?pageid=$pageId&page=$page';
   static String getrecommendedfood(int pageId,String page) =>
       '$recommendedfood?pageid=$pageId&page=$page';
       static String getcartpage() => '$cartpage';
-  //list of pages to be navigated/routed
-  //To refer to each page in the list we can use its corresponding name
+
   static List<GetPage> routes = [
     GetPage(
         name: initial,
@@ -32,7 +31,7 @@ class Routehelper {
           return popularfood_details(
             pageid: int.parse(pageID!,
             ), page: page!,
-          ); //TO convert pageID to int ,use int.parse() method
+          ); 
         },
         transition: Transition.fadeIn),
     GetPage(
