@@ -9,7 +9,7 @@ class Recommendedproductcontroller extends GetxController {
   List<Productsmodel> _recommendedproductlist = [];
   // ignore: non_constant_identifier_names
   List<Productsmodel> get Recommendedproduct_list => _recommendedproductlist;
-  bool _isLoaded = false; //loading instance
+  bool _isLoaded = false; 
   bool get isLoaded =>
       _isLoaded;
 
@@ -29,4 +29,4 @@ class Recommendedproductcontroller extends GetxController {
     }
   }
 }
-//data is passed to controller as in the form of model object (line 18)
+
